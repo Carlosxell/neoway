@@ -1,44 +1,43 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router';
-import { NewsService } from './services';
-import HelloWorld from './components/HelloWorld.vue';
-import { onMounted } from 'vue'
-
-onMounted(async () => {
-  const params = { q: 'tesla', from: '2024-06-29', sortBy: 'publishedAt', language: 'en' };
-
-  console.info(import.meta.env.VITE_API_KEY, 'TESTE')
-
-  try {
-    const response = await NewsService.fetchNews(params);
-    console.info(response);
-  } catch (error) {
-    console.log(error);
-  }
-})
-</script>
-
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
+      <nav class="">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
   </header>
 
-  <RouterView />
+  <main class="">
+    <RouterView />
+  </main>
 </template>
 
-<style scoped lang="scss">
+<script setup>
+import { RouterLink, RouterView } from 'vue-router';
+import { NewsService } from './services';
+import HelloWorld from './components/HelloWorld.vue';
+import { onMounted } from 'vue'
+import CompIcon from './components/Icon/CompIcon.vue'
+
+onMounted(async () => {
+  const params = { q: 'tesla', from: '2024-06-29', sortBy: 'publishedAt', language: 'en' };
+
+  try {
+    const response = await NewsService.fetchNews(params);
+    console.info(response, 'API RESPONSE');
+  } catch (error) {
+    console.log(error);
+  }
+})
+</script>
+
+<style lang="scss">
 @import '@/styles/utilities/utils/all';
+@import '@/styles/utilities/utils/root';
 @import '@/styles/utilities/variables/all';
-@import '@/styles/app';
+
+@include root();
 
 header {
   line-height: 1.5;
