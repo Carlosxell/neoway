@@ -1,0 +1,19 @@
+// LINE HEIGHT
+$line-height-xs:       #{var(--line-height-xs)};
+$line-height-sm:       #{var(--line-height-sm)};
+$line-height-default:  #{var(--line-height-default)};
+$line-height-md:       #{var(--line-height-md)};
+$line-height-lg:       #{var(--line-height-lg)};
+$line-height-xl:       #{var(--line-height-xl)};
+$line-height-xxl:      #{var(--line-height-xxl)};
+$line-height-ml:       #{var(--line-height-ml)};
+
+// TEXT-DECORATION
+$font-decoration-default: #{var(--font-decoration-default)};
+$font-decoration-underline: #{var(--font-decoration-underline)};
+
+// TEXT-TRANSFORM
+$font-transform-default:      #{var(--font-transform-default)};
+$font-transform-lower:        #{var(--font-transform-lower)};
+$font-transform-upper:        #{var(--font-transform-upper)};
+$font-transform-capitalize:   #{var(--font-transform-capitalize)};

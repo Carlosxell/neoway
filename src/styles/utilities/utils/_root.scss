@@ -1,0 +1,146 @@
+@mixin root {
+	:root {
+		/* BRANDS COLORS */
+		--color-primary-pure: #05113b;
+		--color-primary-light: #395194;
+		--color-primary-medium: #0b277d;
+		--color-primary-dark: #0e1b44;
+		--color-secondary-pure: #205df5;
+		--color-secondary-light: #b3d0ff;
+		--color-secondary-medium: #6ba0ff;
+		--color-secondary-dark: #4887ff;
+
+		/* NEUTRAL */
+		--neutral-color-high-pure: #ffffff;
+		--neutral-color-high-light: #f7fbff;
+		--neutral-color-high-medium: #d7dcf0;
+		--neutral-color-high-dark: #a7afcc;
+		--neutral-color-low-pure: #0f1922;
+		--neutral-color-low-light: #7d84a2;
+		--neutral-color-low-medium: #535b76;
+		--neutral-color-low-dark: #202941;
+
+		/* FEEDBACK */
+		--feedback-color-default-pure: #b2c0d5;
+		--feedback-color-default-light: #f4f6f9;
+		--feedback-color-default-dark: #8097ba;
+		--feedback-color-success-pure: #7dd3e4;
+		--feedback-color-success-light: #e0f7fa;
+		--feedback-color-success-dark: #4ac3d2;
+		--feedback-color-alert-dark: #ffa726;
+		--feedback-color-alert-light: #fff3e0;
+		--feedback-color-alert-pure: #ffcc80;
+		--feedback-color-error-pure: #ff5252;
+		--feedback-color-error-light: #ffebee;
+		--feedback-color-error-dark: #c62828;
+
+		/* INFO */
+		--info-grey-inactive: #a7afcc;
+		--info-grey-active: #4e5770;
+		--info-blue-inactive: #b5d2ff;
+		--info-blue-active: #2a71db;
+		--info-turquoise-inactive: #cbffff;
+		--info-turquoise-active: #009f9b;
+		--info-yellow-inactive: #ffe587;
+		--info-yellow-active: #ffb800;
+		--info-red-inactive: #e9a0a0;
+		--info-red-active: #b01818;
+		--info-purple-inactive: #fed4ff;
+		--info-purple-active: #ab24da;
+		--info-pink-inactive: #ffcfe4;
+		--info-pink-active: #e91085;
+		--info-orange-inactive: #ffbf9d;
+		--info-orange-active: #ee4d08;
+		--info-green-inactive: #b8e0b9;
+		--info-green-active: #228826;
+		--info-cyan-inactive: #c3e6ec;
+		--info-cyan-active: #009bbd;
+
+
+		/* BORDER RADIUS */
+		--border-radius-xs: 4px;
+		--border-radius-sm: 8px;
+		--border-radius-md: 16px;
+		--border-radius-pill: 500px;
+		--border-radius-circle: 50%;
+
+		/* BORDER WIDTH */
+		--border-width-sm: 1px;
+		--border-width-md: 2px;
+
+		/* BOX-SHADOWS */
+
+		--shadow-default: 0px 1px 1px rgba(152, 174, 197, 0.2), 0px 2px 2px rgba(152, 174, 197, 0.14),
+			0px 1px 5px rgba(152, 174, 197, 0.12);
+		--shadow-active: 0px 5px 5px rgba(152, 174, 197, 0.2), 0px 9px 10px rgba(152, 174, 197, 0.14),
+			0px 5px 14px rgba(152, 174, 197, 0.12);
+		--shadow-light: 0px 3px 10px -2px rgba(152, 174, 197, 0.08),
+			0px 2px 20px rgba(152, 174, 197, 0.06), 0px 1px 30px rgba(152, 174, 197, 0.03);
+		--shadow-medium: 0px 2px 4px rgba(152, 174, 197, 0.12),
+			0px 12px 16px 4px rgba(152, 174, 197, 0.07);
+
+		--font-family-base: 'Work Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+			'Noto Sans', 'Liberation Sans', Arial, sans-serif;
+
+		/* FONT WEIGHT */
+		--font-weight-bold: 600;
+		--font-weight-medium: 500;
+		--font-weight-regular: 400;
+
+		/* FONT SIZE */
+		--font-size-xs: 12px;
+		--font-size-sm: 14px;
+		--font-size-default: 16px;
+		--font-size-md: 18px;
+		--font-size-lg: 20px;
+		--font-size-xl: 24px;
+		--font-size-xxl: 32px;
+		--font-size-ml: 36px;
+
+		/* LINE HEIGHT */
+		--line-height-xs: 16px;
+		--line-height-sm: 20px;
+		--line-height-default: 24px;
+		--line-height-md: 28px;
+		--line-height-lg: 32px;
+		--line-height-xl: 36px;
+		--line-height-xxl: 44px;
+		--line-height-ml: 56px;
+
+		/* TEXT-DECORATION */
+		--font-decoration-underline: underline;
+
+		/* TEXT-TRANSFORM */
+		--font-transform-lower: lowercase;
+		--font-transform-upper: uppercase;
+		--font-transform-capitalize: capitalize;
+
+		/* ICONS */
+		--icon-size-xxs: 12px;
+		--icon-size-xs: 14px;
+		--icon-size-sm: 16px;
+		--icon-size-md: 24px;
+		--icon-size-lg: 32px;
+		--icon-size-xl: 36px;
+		--icon-size-xxl: 40px;
+		--icon-size-xlg: 48px;
+
+		/* GAPS */
+		--gap-1: 4px;
+		--gap-2: 8px;
+		--gap-3: 12px;
+		--gap-4: 16px;
+		--gap-5: 20px;
+		--gap-6: 24px;
+		--gap-7: 28px;
+		--gap-8: 32px;
+		--gap-9: 36px;
+		--gap-10: 40px;
+		--gap-11: 44px;
+		--gap-12: 48px;
+		--gap-13: 52px;
+		--gap-14: 56px;
+		--gap-15: 60px;
+		--gap-16: 64px;
+	}
+}

@@ -35,7 +35,11 @@ onMounted(async () => {
   <RouterView />
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@import '@/styles/utilities/utils/all';
+@import '@/styles/utilities/variables/all';
+@import '@/styles/app';
+
 header {
   line-height: 1.5;
   max-height: 100vh;

@@ -1,0 +1,66 @@
+// BRANDS COLORS
+$color-primary-pure: #{var(--color-primary-pure)};
+$color-primary-light: #{var(--color-primary-light)};
+$color-primary-medium: #{var(--color-primary-medium)};
+$color-primary-dark: #{var(--color-primary-dark)};
+$color-secondary-pure: #{var(--color-secondary-pure)};
+$color-secondary-light: #{var(--color-secondary-light)};
+$color-secondary-medium: #{var(--color-secondary-medium)};
+$color-secondary-dark: #{var(--color-secondary-dark)};
+
+// NEUTRAL
+$neutral-color-high-pure: #{var(--neutral-color-high-pure)};
+$neutral-color-high-light: #{var(--neutral-color-high-light)};
+$neutral-color-high-medium: #{var(--neutral-color-high-medium)};
+$neutral-color-high-dark: #{var(--neutral-color-high-dark)};
+//$neutral-color-low-pure: #16181F;
+$neutral-color-low-pure: #{var(--neutral-color-low-pure)};
+$neutral-color-low-light: #{var(--neutral-color-low-light)};
+$neutral-color-low-medium: #{var(--neutral-color-low-medium)};
+$neutral-color-low-dark: #{var(--neutral-color-low-dark)};
+
+// FEEDBACK
+$feedback-color-default-pure: #{var(--feedback-color-default-pure)};
+$feedback-color-default-light: #{var(--feedback-color-default-light)};
+$feedback-color-default-dark: #{var(--feedback-color-default-dark)};
+$feedback-color-success-pure: #{var(--feedback-color-success-pure)};
+$feedback-color-success-light: #{var(--feedback-color-success-light)};
+$feedback-color-success-dark: #{var(--feedback-color-success-dark)};
+$feedback-color-alert-dark: #{var(--feedback-color-alert-dark)};
+$feedback-color-alert-light: #{var(--feedback-color-alert-light)};
+$feedback-color-alert-pure: #{var(--feedback-color-alert-pure)};
+$feedback-color-error-pure: #{var(--feedback-color-error-pure)};
+$feedback-color-error-light: #{var(--feedback-color-error-light)};
+$feedback-color-error-dark: #{var(--feedback-color-error-dark)};
+
+// INFO
+$info-grey-inactive:  #{var(--info-grey-inactive)};
+$info-grey-active: #{var(--info-grey-active)};
+$info-blue-inactive: #{var(--info-blue-inactive)};
+$info-blue-active: #{var(--info-blue-active)};
+$info-turquoise-inactive: #{var(--info-turquoise-inactive)};
+$info-turquoise-active: #{var(--info-turquoise-active)};
+$info-yellow-inactive: #{var(--info-yellow-inactive)};
+$info-yellow-active: #{var(--info-yellow-active)};
+$info-red-inactive: #{var(--info-red-inactive)};
+$info-red-active: #{var(--info-red-active)};
+$info-purple-inactive: #{var(--info-purple-inactive)};
+$info-purple-active: #{var(--info-purple-active)};
+$info-pink-inactive: #{var(--info-pink-inactive)};
+$info-pink-active: #{var(--info-pink-active)};
+$info-orange-inactive: #{var(--info-orange-inactive)};
+$info-orange-active: #{var(--info-orange-active)};
+$info-green-inactive: #{var(--info-green-inactive)};
+$info-green-active: #{var(--info-green-active)};
+$info-cyan-inactive: #{var(--info-cyan-inactive)};
+$info-cyan-active: #{var(--info-cyan-active)};
+
+
+// CORES NÃO ENCONTRADAS NA MIGRAÇÃO
+$status-color-canceled-medium: #{var(--status-color-canceled-medium)};
+$status-color-generated-light: #{var(--status-color-generated-light)};
+$status-color-active-medium: #{var(--status-color-active-medium)};
+$status-color-disabled-medium: #{var(--status-color-disabled-medium)};
+$hc-neutral-color-high-medium: #{var(--status-color-high-medium)};
+$basic-neutral-color-dark: #{var(--status-color-color-dark)};
+$neutral-color-low-light2: #{var(--status-color-low-light2)};

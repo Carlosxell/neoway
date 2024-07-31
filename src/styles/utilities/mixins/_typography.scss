@@ -1,0 +1,161 @@
+@import '../variables/all.scss';
+
+//  UTILS FOR TEXTS
+@mixin break-words {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin ellipsis-multi-line {
+  word-break: break-all;
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+@mixin hyphens {
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+// TITLES, SUBTITLES
+@mixin highlight-title-ml($fs: var(--font-size-ml), $fw: var(--font-weight-bold), $lh: var(--line-height-ml)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin highlight-title-xlg($fs: var(--font-size-xxl), $fw: var(--font-weight-bold), $lh: var(--line-height-xl)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin highlight-title-lg($fs: var(--font-size-xl), $fw: var(--font-weight-bold), $lh: var(--line-height-xl)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin highlight-title-default($fs: var(--font-size-lg), $fw: var(--font-weight-bold), $lh: var(--line-height-md)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin highlight-subtitle-default($fs: var(--font-size-md), $fw: var(--font-weight-medium), $lh: var(--line-height-md)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin highlight-subtitle-sm($fs: var(--font-size-default), $fw: var(--font-weight-medium), $lh: var(--line-height-lg)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+// LINKS
+@mixin highlight-link-df($color: var(--color-primary-pure), $fs: var(--font-size-default), $fw: var(--font-weight-regular), $lh: var(--line-height-lg), $td: var(--font-decoration-default)) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  text-decoration: $td;
+}
+
+@mixin highlight-link-sm($color: var(--color-primary-pure), $fs: var(--font-size-sm), $fw: var(--font-weight-regular), $lh: var(--line-height-lg), $td: var(--font-decoration-default)) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  text-decoration: $td;
+}
+
+// SMALL TEXTS
+@mixin highlight-overline($fs: var(--font-size-xs), $fw: var(--font-weight-medium), $lh: var(--line-height-sm), $tt: var(--font-transform-lower)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  text-transform: $tt;
+}
+
+@mixin highlight-caption($fs: var(--font-size-xs), $fw: var(--font-weight-regular), $lh: var(--line-height-sm)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+// PARAGRAPHS
+@mixin body-default-regular($fs: var(--font-size-default), $fw: var(--font-weight-regular), $lh: var(--line-height-lg)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin body-default-medium($fs: var(--font-size-default), $fw: var(--font-weight-medium), $lh: var(--line-height-lg)) {
+  font-family: var(--font-family-base);
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin body-default-bold($fs: var(--font-size-default), $fw: var(--font-weight-bold), $lh: var(--line-height-lg)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin body-sm-regular($fs: var(--font-size-sm), $fw: var(--font-weight-regular), $lh: var(--line-height-lg)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin body-sm-medium($fs: var(--font-size-sm), $fw: var(--font-weight-medium), $lh: var(--line-height-lg)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin body-sm-bold($fs: var(--font-size-sm), $fw: var(--font-weight-bold), $lh: var(--line-height-lg)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin highlight-title-sm($fs: var(--font-size-default), $fw: var(--font-weight-bold), $lh: var(--line-height-df), $ff: var(--font-family-base), $color: var(--neutral-color-low-pure)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  font-family: $ff;
+  color: $color
+}
+
+@mixin highlight-title-md($fs: var(--font-size-md), $fw: var(--font-weight-bold), $lh: var(--line-height-md), $ff: var(--font-family-base), $color: var(--neutral-color-low-pure)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  font-family: $ff;
+  color: $color
+}
+
+@mixin highlight-title-xs($fs: var(--font-size-sm), $fw: var(--font-weight-bold), $lh: var(--line-height-sm), $ff: var(--font-family-base), $color: var(--neutral-color-low-pure)) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  font-family: $ff;
+  color: $color
+}
