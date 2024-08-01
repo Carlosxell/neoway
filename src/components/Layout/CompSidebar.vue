@@ -74,6 +74,7 @@ import CompIcon from '@/components/Icon/CompIcon.vue';
 
     &__text {
       color: var(--neutralColor--light-1);
+      padding-bottom: var(--gap-2);
       text-decoration: none;
     }
   }
