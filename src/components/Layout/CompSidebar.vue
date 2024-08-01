@@ -48,7 +48,9 @@ import CompIcon from '@/components/Icon/CompIcon.vue';
   margin: 0;
   padding: 0;
 
-  &__item {}
+  &__item {
+    margin: var(--gap-1) 0;
+  }
 
   &__btn {
     @extend %reset-btn;
@@ -74,6 +76,8 @@ import CompIcon from '@/components/Icon/CompIcon.vue';
 
     &__text {
       color: var(--neutralColor--light-1);
+      font-weight: 500;
+      font-size: var(--font-size-sm);
       padding-bottom: var(--gap-2);
       text-decoration: none;
     }

@@ -10,7 +10,7 @@
 
 <script setup>
 import { RouterView } from 'vue-router';
-import CompSidebar from '@/components/Layout/CompSidebar.vue'
+import CompSidebar from '@/components/Layout/CompSidebar.vue';
 </script>
 
 <style lang="scss">
