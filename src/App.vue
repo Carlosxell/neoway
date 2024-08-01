@@ -10,20 +10,7 @@
 
 <script setup>
 import { RouterView } from 'vue-router';
-import { NewsService } from './services';
-import { onMounted } from 'vue'
 import CompSidebar from '@/components/Layout/CompSidebar.vue'
-
-onMounted(async () => {
-  const params = { q: 'tesla', from: '2024-06-29', sortBy: 'publishedAt', language: 'en' };
-
-  try {
-    const response = await NewsService.fetchNews(params);
-    console.info(response, 'API RESPONSE');
-  } catch (error) {
-    console.log(error);
-  }
-})
 </script>
 
 <style lang="scss">
