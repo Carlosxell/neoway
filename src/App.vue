@@ -1,6 +1,8 @@
 <template>
   <main class="app__wrapper">
-    <CompSidebar class="app__sidebar" />
+    <CompSidebar @openSearchForm="(searchBarOpen = true)" class="app__sidebar" />
+
+    <CompSearchForm @closeSearchForm="(searchBarOpen = false)" :open="searchBarOpen" />
 
     <div class="app__content">
       <RouterView />
@@ -11,6 +13,10 @@
 <script setup>
 import { RouterView } from 'vue-router';
 import CompSidebar from '@/components/Layout/CompSidebar.vue';
+import CompSearchForm from '@/components/Layout/CompSearchForm.vue';
+import { ref } from 'vue'
+
+const searchBarOpen = ref(false);
 </script>
 
 <style lang="scss">

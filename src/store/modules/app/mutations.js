@@ -3,7 +3,7 @@ export default {
     state.bookmarks = [...params];
   },
   SET_FILTERS(state, params) {
-    state.filters = params;
+    state.filters = { ...params.filters, ...params };
   },
   SET_LAST_SEEN_LIST(state, params) {
     state.lastSeenList = [...params];

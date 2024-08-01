@@ -2,7 +2,7 @@
   <aside class="compSidebar">
     <ul class="menu">
       <li class="menu__item">
-        <button class="menu__btn" type="button">
+        <button @click="$emit('openSearchForm')" class="menu__btn" type="button">
           <span class="menu__btn__text">Busca</span>
           <CompIcon class="menu__icon" name="search" size="large" />
         </button>
@@ -41,6 +41,7 @@ import CompIcon from '@/components/Icon/CompIcon.vue';
   position: fixed;
   top: 0;
   width: 96px;
+  z-index: 8;
 }
 
 .menu {

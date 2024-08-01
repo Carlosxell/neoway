@@ -1,6 +1,8 @@
 <template>
   <section class="homeView">
-    <CompEmptyState title="Nenhuma notícia encontrada." subtitle="" v-if="!list?.length && !loading" />
+    <CompEmptyState subtitle=""
+                    title="Nenhuma notícia encontrada."
+                    v-if="!list?.length && !loading" />
 
     <div class="homeView__grid" v-else>
       <CompCard :checkIsMark="checkIsMark(item.id)"
@@ -11,31 +13,36 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import { useStore } from 'vuex';
 import { NewsService } from '../services';
-import CompEmptyState from '@/components/EmptyState/CompEmptyState.vue'
-import CompCard from '@/components/Card/CompCard.vue'
+import CompEmptyState from '@/components/EmptyState/CompEmptyState.vue';
+import CompCard from '@/components/Card/CompCard.vue';
+
+const store = useStore();
 
 let loading = ref(false);
 let list = ref([]);
 
-const store = useStore();
+const filters = computed(() => store.getters['app/getCheckedFilters']);
 
 const checkIsMark = (id) => {
   return store.getters['app/getBookmarks'].some((i) => (i.id === id))
 };
 
 async function fetchNews() {
-  let params = { qtd: 100, busca: 'Preços' };
+  let params = { qtd: 100 };
 
   loading.value = true;
   list.value = [];
 
+  if (filters.value.search) {
+    params = { ...params, ...filters.value };
+  }
+
   try {
     const { items } = await NewsService.fetchNews(params);
     list.value = [ ...items ];
-    console.info(items, 'API RESPONSE');
   } catch (error) {
     console.log(error, 'ERROR');
   } finally {
@@ -43,6 +50,7 @@ async function fetchNews() {
   }
 }
 
+watch(() => filters.value, () => fetchNews(), { immediate: true, deep: true });
 onMounted(() => { fetchNews() });
 </script>
 

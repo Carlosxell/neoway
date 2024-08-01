@@ -1,6 +1,8 @@
 <template>
   <section class="bookmarksView">
-    <CompEmptyState title="Nenhuma notícia foi encontrada dentre os favoritos." subtitle="" v-if="!bookmarks?.length" />
+    <CompEmptyState subtitle=""
+                    title="Nenhuma notícia foi encontrada dentre os favoritos."
+                    v-if="!bookmarks?.length" />
 
     <div class="homeView__grid" v-else>
       <CompCard :checkIsMark="checkIsMark(item.id)"
