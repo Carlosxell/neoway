@@ -1,24 +1,18 @@
 <template>
-  <header>
-    <div class="wrapper">
-      <nav class="">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+  <main class="app__wrapper">
+    <CompSidebar class="app__sidebar" />
 
-  <main class="">
-    <RouterView />
+    <div class="app__content">
+      <RouterView />
+    </div>
   </main>
 </template>
 
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterView } from 'vue-router';
 import { NewsService } from './services';
-import HelloWorld from './components/HelloWorld.vue';
 import { onMounted } from 'vue'
-import CompIcon from './components/Icon/CompIcon.vue'
+import CompSidebar from '@/components/Layout/CompSidebar.vue'
 
 onMounted(async () => {
   const params = { q: 'tesla', from: '2024-06-29', sortBy: 'publishedAt', language: 'en' };
@@ -39,65 +33,31 @@ onMounted(async () => {
 
 @include root();
 
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
+#app {
+  display: inline-flex;
+  height: 100%;
+  min-height: 100vh;
+  max-width: 100vw;
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
+.app {
+  &__sidebar {}
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+  &__wrapper {
+    background-color: var(--bgColor--dark-1);
+    color: var(--neutral-color-high-light);
+    display: inline-block;
+    min-height: 100vh;
+    padding-left: 96px;
+    width: 100%;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+  &__content {
+    margin: auto;
+    max-width: 1048px;
+    padding: var(--gap-2);
+    width: 100%;
   }
 }
 </style>
